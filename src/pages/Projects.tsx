@@ -60,12 +60,12 @@ export default function ProjectsPage() {
       <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-brand-dark">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=2000"
-            alt="Steel Structure Project"
-            className="w-full h-full object-cover opacity-60"
+            src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=2000"
+            alt="Steel Structure Construction"
+            className="w-full h-full object-cover opacity-50"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-brand-dark/60" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
