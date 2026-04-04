@@ -102,17 +102,19 @@ export default function ProjectsPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
+                <motion.button
                   key={category}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-2 text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-none border ${
                     activeCategory === category 
-                      ? "bg-brand-orange border-brand-orange text-white" 
+                      ? "bg-brand-orange border-brand-orange text-white shadow-lg shadow-brand-orange/20" 
                       : "bg-transparent border-brand-dark/10 text-brand-dark/60 hover:border-brand-orange hover:text-brand-orange"
                   }`}
                 >
                   {category}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>

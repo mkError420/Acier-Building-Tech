@@ -73,12 +73,14 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           className={`lg:hidden p-2 text-white`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
-        </button>
+        </motion.button>
       </div>
 
       {/* Mobile Menu */}

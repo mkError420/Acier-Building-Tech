@@ -49,7 +49,8 @@ export default function FAQ() {
                 key={index}
                 className="bg-white border border-brand-dark/5 overflow-hidden transition-all duration-300"
               >
-                <button
+                <motion.button
+                  whileHover={{ backgroundColor: "rgba(0,0,0,0.02)" }}
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-8 py-6 flex items-center justify-between text-left group"
                 >
@@ -59,7 +60,7 @@ export default function FAQ() {
                   <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-brand-orange border-brand-orange rotate-180' : 'border-brand-dark/10 group-hover:border-brand-orange'}`}>
                     <ChevronDown className={`w-4 h-4 transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-brand-dark/40 group-hover:text-brand-orange'}`} />
                   </div>
-                </button>
+                </motion.button>
                 
                 <motion.div
                   initial={false}

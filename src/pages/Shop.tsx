@@ -168,12 +168,14 @@ export default function Shop() {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row shadow-2xl scrollbar-hide"
             >
-              <button 
+              <motion.button 
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={() => setIsBookingOpen(false)}
                 className="absolute top-2 right-2 md:top-4 md:right-4 z-20 w-8 h-8 md:w-10 md:h-10 bg-brand-dark text-white flex items-center justify-center hover:bg-brand-orange transition-colors"
               >
                 <X className="w-4 h-4 md:w-5 md:h-5" />
-              </button>
+              </motion.button>
 
               {/* Modal Left: Product Preview */}
               <div className="md:w-1/3 bg-brand-light p-6 md:p-8 border-b md:border-b-0 md:border-r border-brand-dark/5">
