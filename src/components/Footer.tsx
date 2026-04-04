@@ -105,8 +105,8 @@ export default function Footer() {
           </button>
           
           <div className="flex gap-8">
-            <a href="#" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Privacy Policy</a>
-            <a href="#" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Terms of Service</a>
+            <Link to="/privacy-policy" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Terms of Service</Link>
           </div>
         </div>
       </div>
