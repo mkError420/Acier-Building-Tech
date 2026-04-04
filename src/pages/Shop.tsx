@@ -166,18 +166,18 @@ export default function Shop() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative bg-white w-full max-w-4xl overflow-hidden flex flex-col md:flex-row shadow-2xl"
+              className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row shadow-2xl scrollbar-hide"
             >
               <button 
                 onClick={() => setIsBookingOpen(false)}
-                className="absolute top-4 right-4 z-20 w-10 h-10 bg-brand-dark text-white flex items-center justify-center hover:bg-brand-orange transition-colors"
+                className="absolute top-2 right-2 md:top-4 md:right-4 z-20 w-8 h-8 md:w-10 md:h-10 bg-brand-dark text-white flex items-center justify-center hover:bg-brand-orange transition-colors"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 md:w-5 md:h-5" />
               </button>
 
               {/* Modal Left: Product Preview */}
-              <div className="md:w-1/3 bg-brand-light p-8 border-r border-brand-dark/5">
-                <div className="aspect-square mb-6 overflow-hidden">
+              <div className="md:w-1/3 bg-brand-light p-6 md:p-8 border-b md:border-b-0 md:border-r border-brand-dark/5">
+                <div className="aspect-video md:aspect-square mb-4 md:mb-6 overflow-hidden">
                   <img
                     src={selectedProduct.image}
                     alt={selectedProduct.title}
@@ -185,10 +185,10 @@ export default function Shop() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <h4 className="text-xs uppercase tracking-[0.3em] text-brand-orange font-bold mb-2">Booking Item</h4>
-                <h3 className="text-xl font-black text-brand-dark uppercase tracking-tight mb-4">{selectedProduct.title}</h3>
-                <div className="text-2xl font-black text-brand-orange mb-6">{selectedProduct.price}</div>
-                <div className="space-y-4">
+                <h4 className="text-[10px] uppercase tracking-[0.3em] text-brand-orange font-bold mb-1 md:mb-2">Booking Item</h4>
+                <h3 className="text-lg md:text-xl font-black text-brand-dark uppercase tracking-tight mb-2 md:mb-4">{selectedProduct.title}</h3>
+                <div className="text-xl md:text-2xl font-black text-brand-orange mb-4 md:mb-6">{selectedProduct.price}</div>
+                <div className="hidden md:block space-y-4">
                   <div className="flex items-start gap-3">
                     <Info className="w-4 h-4 text-brand-dark/40 mt-1" />
                     <p className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/40 leading-relaxed">
@@ -199,43 +199,43 @@ export default function Shop() {
               </div>
 
               {/* Modal Right: Form */}
-              <div className="md:w-2/3 p-8 md:p-12">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-[2px] w-8 bg-brand-orange" />
-                  <span className="text-brand-orange uppercase tracking-[0.3em] text-[10px] font-bold">
+              <div className="md:w-2/3 p-6 md:p-12">
+                <div className="flex items-center gap-3 mb-2 md:mb-4">
+                  <div className="h-[1px] md:h-[2px] w-6 md:w-8 bg-brand-orange" />
+                  <span className="text-brand-orange uppercase tracking-[0.3em] text-[9px] md:text-[10px] font-bold">
                     Reservation Form
                   </span>
                 </div>
-                <h2 className="text-3xl font-black text-brand-dark uppercase tracking-tighter mb-8">
+                <h2 className="text-2xl md:text-3xl font-black text-brand-dark uppercase tracking-tighter mb-6 md:mb-8">
                   Confirm Your <span className="text-brand-orange">Booking</span>.
                 </h2>
 
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Full Name</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-12" placeholder="Your Name" />
+                <form className="space-y-4 md:space-y-6" onSubmit={(e) => e.preventDefault()}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div className="space-y-1 md:space-y-2">
+                      <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Full Name</label>
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="Your Name" />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Company Name</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-12" placeholder="Your Company" />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Email Address</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-12" placeholder="email@example.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Phone Number</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-12" placeholder="+880..." />
+                    <div className="space-y-1 md:space-y-2">
+                      <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Company Name</label>
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="Your Company" />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Customization Requirements</label>
-                    <Textarea className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 min-h-[100px]" placeholder="Any specific changes to the plan?" />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div className="space-y-1 md:space-y-2">
+                      <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Email Address</label>
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="email@example.com" />
+                    </div>
+                    <div className="space-y-1 md:space-y-2">
+                      <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Phone Number</label>
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="+880..." />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1 md:space-y-2">
+                    <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Customization Requirements</label>
+                    <Textarea className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 min-h-[80px] md:min-h-[100px]" placeholder="Any specific changes to the kit?" />
                   </div>
 
                   <Button 
@@ -243,7 +243,7 @@ export default function Shop() {
                       alert("Booking request submitted! Our team will contact you soon.");
                       setIsBookingOpen(false);
                     }}
-                    className="w-full bg-brand-orange hover:bg-brand-dark text-white rounded-none py-8 text-sm uppercase tracking-widest font-black transition-all group"
+                    className="w-full bg-brand-orange hover:bg-brand-dark text-white rounded-none py-6 md:py-8 text-xs md:text-sm uppercase tracking-widest font-black transition-all group"
                   >
                     Submit Booking Request
                     <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
