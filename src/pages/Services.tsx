@@ -41,15 +41,15 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-brand-dark">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=2000"
             alt="Industrial Site"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-60"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-brand-dark/40" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">

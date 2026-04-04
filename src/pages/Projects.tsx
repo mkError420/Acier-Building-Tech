@@ -57,15 +57,15 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 bg-brand-dark overflow-hidden">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-brand-dark">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=2000"
-            alt="Projects Hero"
-            className="w-full h-full object-cover opacity-30 grayscale"
+            alt="Steel Structure Project"
+            className="w-full h-full object-cover opacity-60"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark to-brand-dark" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -81,11 +81,11 @@ export default function ProjectsPage() {
                 Our Portfolio
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8">
+            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
               Structural <br />
               <span className="text-brand-orange">Milestones</span>.
             </h1>
-            <p className="text-white/60 text-lg md:text-xl leading-relaxed font-light">
+            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
               Explore our diverse portfolio of successfully completed projects across various sectors, demonstrating our commitment to engineering excellence.
             </p>
           </motion.div>
