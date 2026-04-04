@@ -45,7 +45,7 @@ export default function Navbar() {
             <Building2 className="w-6 h-6 text-white" />
           </div>
           <div className="font-logo text-2xl flex items-center gap-2 font-bold">
-            <span className="text-red-500 underline">acieR</span>
+            <span className="text-red-500">acieR</span>
             <span className="text-white">building</span>
             <span className="text-red-500">technology</span>
           </div>

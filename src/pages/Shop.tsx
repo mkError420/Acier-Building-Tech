@@ -8,39 +8,39 @@ import { Textarea } from "@/components/ui/textarea";
 const products = [
   {
     id: 1,
-    title: "Eco-Industrial Warehouse Plan",
-    price: "$2,500",
+    title: "Industrial Steel Kit (Small)",
+    price: "$15,000",
     category: "Industrial",
-    description: "Complete structural and architectural plans for a 10,000 sq. ft. sustainable warehouse.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000",
-    features: ["Steel Frame Design", "Solar Ready Roof", "HVAC Layout", "Foundation Specs"]
+    description: "Complete pre-fabricated steel frame kit for a 2,500 sq. ft. industrial unit. Includes all columns, beams, and bolts.",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000",
+    features: ["High-Grade Steel", "Pre-Drilled Holes", "Assembly Manual", "Corrosion Resistant"]
   },
   {
     id: 2,
-    title: "Modern Commercial Office Shell",
-    price: "$4,800",
+    title: "Commercial Office Shell Kit",
+    price: "$45,000",
     category: "Commercial",
-    description: "Advanced structural engineering plans for a 5-story modern glass and steel office building.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
-    features: ["Curtain Wall Details", "Elevator Core Design", "Fire Safety Plans", "Seismic Analysis"]
+    description: "Modular structural shell for a two-story commercial office space. Designed for rapid on-site assembly.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1000",
+    features: ["Modular Design", "Glass-Ready Frames", "Internal Partitioning", "Fire Rated"]
   },
   {
     id: 3,
-    title: "Standard Logistics Hub Design",
-    price: "$3,200",
+    title: "Logistics Hub Expansion Kit",
+    price: "$28,000",
     category: "Logistics",
-    description: "Optimized logistics center design focused on loading dock efficiency and heavy-duty flooring.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1000",
-    features: ["Heavy Load Flooring", "Dock Leveler Specs", "Clear Span Tech", "Lighting Design"]
+    description: "Standardized expansion kit for existing warehouses. Adds 2 additional loading bays with full structural support.",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000",
+    features: ["Seamless Integration", "Heavy Duty Steel", "Dock Leveler Frames", "Weather Sealed"]
   },
   {
     id: 4,
-    title: "Retrofitting Blueprint Pack",
-    price: "$1,500",
+    title: "Structural Reinforcement Kit",
+    price: "$8,500",
     category: "Retrofitting",
-    description: "Universal structural reinforcement plans for older industrial buildings to meet modern codes.",
+    description: "Comprehensive kit for structural retrofitting. Includes carbon fiber wraps and steel jacketing components.",
     image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=1000",
-    features: ["Column Jacketing", "Roof Strengthening", "Wall Bracing", "Material Specs"]
+    features: ["Carbon Fiber Tech", "Steel Jacketing", "Epoxy Resin Incl.", "Installation Tools"]
   }
 ];
 
@@ -77,15 +77,15 @@ export default function Shop() {
             <div className="flex items-center gap-3 mb-6">
               <div className="h-[2px] w-12 bg-brand-orange" />
               <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
-                Digital Store
+                Equipment & Materials
               </span>
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
-              Project <br />
-              <span className="text-brand-orange">Marketplace</span>.
+              Construction <br />
+              <span className="text-brand-orange">Kits</span>.
             </h1>
             <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
-              Purchase pre-designed structural blueprints and architectural plans tailored for industrial and commercial excellence.
+              High-quality, pre-engineered construction kits for industrial, commercial, and logistics projects. Built for durability and rapid deployment.
             </p>
           </motion.div>
         </div>
