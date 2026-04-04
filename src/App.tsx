@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import TopHeader from "./components/TopHeader";
 import Footer from "./components/Footer";
 import Clients from "./components/Clients";
 import ScrollToTop from "./components/ScrollToTop";
@@ -17,6 +18,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-brand-light selection:bg-brand-orange selection:text-white">
+        <TopHeader />
         <Navbar />
         <main>
           <Routes>

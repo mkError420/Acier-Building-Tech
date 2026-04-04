@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="bg-brand-orange p-1.5 rounded-sm transform group-hover:rotate-12 transition-transform">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
-          <div className="font-logo text-2xl flex items-center gap-2 font-bold">
+          <div className="font-logo text-lg md:text-2xl flex items-center gap-1 md:gap-2 font-bold">
             <span className="text-red-500">acieR</span>
             <span className="text-white">building</span>
             <span className="text-red-500">technology</span>
@@ -46,6 +46,7 @@ export default function Footer() {
                 { name: "Home", href: "/" },
                 { name: "Services", href: "/services" },
                 { name: "Projects", href: "/projects" },
+                { name: "Shop", href: "/shop" },
                 { name: "About", href: "/about" },
                 { name: "Contact", href: "/contact" }
               ].map((link) => (

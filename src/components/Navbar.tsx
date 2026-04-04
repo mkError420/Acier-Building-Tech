@@ -35,16 +35,16 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || !isHomePage ? "bg-brand-dark/95 backdrop-blur-md py-3 border-b border-white/10" : "bg-transparent py-6"
+      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled || !isHomePage ? "bg-brand-dark/95 backdrop-blur-md border-b border-white/10 top-0" : "bg-transparent top-0 md:top-10"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className={`container mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled || !isHomePage ? "py-3" : "py-6"}`}>
         <Link to="/" className="flex items-center gap-2 group">
           <div className="bg-brand-orange p-1.5 rounded-sm transform group-hover:rotate-12 transition-transform">
             <Building2 className="w-6 h-6 text-white" />
           </div>
-          <div className="font-logo text-2xl flex items-center gap-2 font-bold">
+          <div className="font-logo text-lg md:text-2xl flex items-center gap-1 md:gap-2 font-bold">
             <span className="text-red-500">acieR</span>
             <span className="text-white">building</span>
             <span className="text-red-500">technology</span>
@@ -52,12 +52,12 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
-              className={`text-sm font-medium uppercase tracking-widest hover:text-brand-orange transition-colors ${
+              className={`text-[10px] xl:text-sm font-medium uppercase tracking-widest hover:text-brand-orange transition-colors ${
                 location.pathname === link.href ? "text-brand-orange" : "text-white/90"
               }`}
             >
@@ -65,7 +65,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link to="/contact">
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-none uppercase tracking-widest text-xs px-6">
+            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-none uppercase tracking-widest text-[10px] xl:text-xs px-4 xl:px-6">
               Get a Quote
             </Button>
           </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className={`md:hidden p-2 text-white`}
+          className={`lg:hidden p-2 text-white`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -87,7 +87,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-brand-dark border-b border-white/10 md:hidden"
+            className="absolute top-full left-0 right-0 bg-brand-dark border-b border-white/10 lg:hidden"
           >
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (

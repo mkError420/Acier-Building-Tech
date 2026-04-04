@@ -138,10 +138,10 @@ export default function Shop() {
                   
                   <Button 
                     onClick={() => handleBooking(product)}
-                    className="w-full bg-brand-dark hover:bg-brand-orange text-white rounded-none py-6 uppercase tracking-widest text-xs font-bold transition-colors group"
+                    className="w-full bg-brand-dark hover:bg-brand-orange text-white rounded-none py-6 uppercase tracking-widest text-[10px] lg:text-xs font-bold transition-colors group whitespace-nowrap px-2"
                   >
-                    Book This Project
-                    <ShoppingBag className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                    Book This Kit
+                    <ShoppingBag className="ml-2 w-3 h-3 lg:w-4 lg:h-4 group-hover:scale-110 transition-transform" />
                   </Button>
                 </div>
               </motion.div>
