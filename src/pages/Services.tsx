@@ -1,5 +1,6 @@
 import Services from "@/components/Services";
 import ConsultancyServices from "@/components/ConsultancyServices";
+import OrgChart from "@/components/OrgChart";
 import CTA from "@/components/CTA";
 import { motion } from "motion/react";
 
@@ -48,8 +49,12 @@ export default function ServicesPage() {
       {/* Consultancy Services Section */}
       <ConsultancyServices />
 
+      {/* Organization Chart Section */}
+      <OrgChart />
+
       {/* CTA Section */}
       <CTA />
     </div>
   );
 }
+
