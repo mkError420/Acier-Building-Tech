@@ -102,7 +102,7 @@ export default function Hero() {
         transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[8px] uppercase tracking-[0.5em] text-white/40 font-bold">Scroll</span>
+        <span className="text-[8px] uppercase tracking-[0.5em] text-white/40 font-bold"></span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-brand-orange to-transparent" />
       </motion.div>
     </section>

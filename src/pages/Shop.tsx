@@ -94,16 +94,16 @@ export default function Shop() {
       {/* Products Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {products.map((product) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group border border-brand-dark/5 bg-brand-light flex flex-col md:flex-row overflow-hidden hover:shadow-2xl transition-all duration-500"
+                className="group border border-brand-dark/5 bg-brand-light flex flex-col lg:flex-row overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
-                <div className="md:w-2/5 relative overflow-hidden">
+                <div className="lg:w-2/5 relative overflow-hidden aspect-video lg:aspect-auto">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -115,20 +115,20 @@ export default function Shop() {
                   </div>
                 </div>
                 
-                <div className="md:w-3/5 p-8 flex flex-col justify-between">
+                <div className="lg:w-3/5 p-6 lg:p-8 flex flex-col justify-between">
                   <div>
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-black text-brand-dark uppercase tracking-tight leading-tight">
+                    <div className="flex justify-between items-start mb-4 gap-2">
+                      <h3 className="text-lg lg:text-xl font-black text-brand-dark uppercase tracking-tight leading-tight">
                         {product.title}
                       </h3>
-                      <span className="text-brand-orange font-black text-xl">{product.price}</span>
+                      <span className="text-brand-orange font-black text-lg lg:text-xl">{product.price}</span>
                     </div>
-                    <p className="text-brand-dark/60 text-sm mb-6 leading-relaxed">
+                    <p className="text-brand-dark/60 text-xs lg:text-sm mb-6 leading-relaxed">
                       {product.description}
                     </p>
                     <ul className="space-y-2 mb-8">
                       {product.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-brand-dark/40">
+                        <li key={i} className="flex items-center gap-2 text-[9px] lg:text-[10px] uppercase tracking-widest font-bold text-brand-dark/40">
                           <Check className="w-3 h-3 text-brand-orange" />
                           {feature}
                         </li>
@@ -138,7 +138,7 @@ export default function Shop() {
                   
                   <Button 
                     onClick={() => handleBooking(product)}
-                    className="w-full bg-brand-dark hover:bg-brand-orange text-white rounded-none py-6 uppercase tracking-widest text-[10px] lg:text-xs font-bold transition-colors group whitespace-nowrap px-2"
+                    className="w-full bg-brand-dark hover:bg-brand-orange text-white rounded-none py-5 lg:py-6 uppercase tracking-widest text-[10px] lg:text-xs font-bold transition-colors group px-4"
                   >
                     Book This Kit
                     <ShoppingBag className="ml-2 w-3 h-3 lg:w-4 lg:h-4 group-hover:scale-110 transition-transform" />

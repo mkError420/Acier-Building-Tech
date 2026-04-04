@@ -92,18 +92,10 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
           <div className="text-white/20 text-[10px] uppercase tracking-widest font-bold">
-            © 2026 Acier Building Tech. All Rights Reserved.
+            © {new Date().getFullYear()} Acier Building Tech. All Rights Reserved.
           </div>
           
-          <button
-            onClick={scrollToTop}
-            className="group flex items-center gap-4 text-white/40 hover:text-white transition-colors"
-          >
-            <span className="text-[10px] uppercase tracking-widest font-bold">Back to Top</span>
-            <div className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-sm group-hover:border-brand-orange transition-colors">
-              <ArrowUp className="w-4 h-4" />
-            </div>
-          </button>
+       
           
           <div className="flex gap-8">
             <Link to="/privacy-policy" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Privacy Policy</Link>
