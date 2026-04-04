@@ -21,7 +21,11 @@ const features = [
   },
 ];
 
-export default function About() {
+interface AboutProps {
+  showButton?: boolean;
+}
+
+export default function About({ showButton = true }: AboutProps) {
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -62,12 +66,14 @@ export default function About() {
               ))}
             </div>
 
-            <Link to="/about">
-              <Button className="bg-brand-dark hover:bg-brand-dark/90 text-white rounded-none px-12 py-8 text-sm uppercase tracking-widest group">
-                Full Story
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+            {showButton && (
+              <Link to="/about">
+                <Button className="bg-brand-dark hover:bg-brand-dark/90 text-white rounded-none px-12 py-8 text-sm uppercase tracking-widest group">
+                  Full Story
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            )}
           </div>
 
           <motion.div
