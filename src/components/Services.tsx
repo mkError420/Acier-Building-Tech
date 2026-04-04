@@ -4,41 +4,35 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const services = [
   {
-    title: "Steel Structures",
-    description: "High-performance steel fabrication and erection for industrial and commercial buildings.",
+    title: "Construction",
+    description: "High-quality RCC and steel building construction, delivering durable and aesthetically pleasing structures.",
     icon: Building2,
     color: "bg-brand-orange",
   },
   {
-    title: "Structural Engineering",
-    description: "Advanced structural analysis and design for complex architectural projects.",
-    icon: Ruler,
+    title: "Project & Construction Management",
+    description: "We manage the various phases of the project acting as an extension of the Owners organization.Depending upon the project requirements, we establish the procedure for the appointment of Architect/Engineer to produce the design and to carry out the construction.We set the strategy and manage the activities of the A/E and Client covering all phases from pre-construction through completion and act as the single point of contact with the Owner.",
+    icon: HardHat,
     color: "bg-brand-steel",
   },
   {
-    title: "Construction Management",
-    description: "End-to-end project management ensuring quality, safety, and timely delivery.",
-    icon: HardHat,
+    title: "Design Management",
+    description: "We manage the Design process for the Owner guiding him in seeking the appropriate Architect and specialty Engineers (Structural, Electrical, Mechanical, Other), managing and coordinating their activities and deliverables while ensuring design coordination, construction compatibility and efficiency through the various stages of the design process (Concept, Preliminary, Final through Tender Documents).",
+    icon: Ruler,
     color: "bg-brand-orange",
   },
   {
-    title: "Renovation & Retrofitting",
-    description: "Strengthening and modernizing existing structures with the latest technology.",
+    title: "Tender Management",
+    description: "We manage the Tender process on behalf of the Owner by short-listing qualified contractors from our extensive database of contractors and vendors, distributing the Tender Documents, following up on Tender queries, evaluating bids technically and commercially and making recommendations to the Owner.",
     icon: Hammer,
     color: "bg-brand-steel",
   },
   {
-    title: "Safety Compliance",
-    description: "Rigorous safety standards and compliance auditing for all construction sites.",
+    title: "Client Representation",
+    description: "We represent the Owner and monitor the works of the various parties (Project Manager, A/E, Consultant, Contractor) acting as the point of contact between the Owner and the involved parties and coordinate matters that require his approval in an efficient fashion giving him advise to make correct decisions",
     icon: Shield,
     color: "bg-brand-orange",
-  },
-  {
-    title: "Innovative Building Tech",
-    description: "Implementing smart building solutions and sustainable construction methods.",
-    icon: Zap,
-    color: "bg-brand-steel",
-  },
+  }
 ];
 
 export default function Services() {
@@ -86,7 +80,7 @@ export default function Services() {
                 </p>
                 
                 <div className="mt-10 flex items-center gap-3 text-brand-orange font-bold text-[10px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  Explore Service
+                
                   <div className="h-[1px] w-10 bg-brand-orange" />
                 </div>
               </div>

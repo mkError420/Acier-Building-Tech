@@ -1,43 +1,73 @@
 import { motion } from "motion/react";
+import { Calculator, Search, ShoppingCart, FileText, AlertTriangle } from "lucide-react";
 
 const consultancyServices = [
-  { name: "Value Engineering", logo: "https://thevalueengineering.com/assets/logo-AP6BmeKw.png" },
-  { name: "Cost Analysis", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=200" },
-  { name: "Procurement", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=200" },
-  { name: "Claims Management", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=200" },
-  { name: "Troubleshooting", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=200" },
+  { 
+    name: "Value Engineering / Design Review", 
+    icon: Search,
+    description: "Optimizing project value and performance through meticulous design analysis."
+  },
+  { 
+    name: "Cost Analysis and Estimation", 
+    icon: Calculator,
+    description: "Accurate financial forecasting and budgeting for informed decision-making."
+  },
+  { 
+    name: "Procurement", 
+    icon: ShoppingCart,
+    description: "Strategic sourcing of high-quality materials and equipment for project success."
+  },
+  { 
+    name: "Claims Management", 
+    icon: FileText,
+    description: "Expert handling of contractual claims to ensure fair and timely resolutions."
+  },
+  { 
+    name: "Troubleshooting", 
+    icon: AlertTriangle,
+    description: "Rapidly identifying and resolving project-related problems to keep work on track."
+  },
 ];
 
 export default function ConsultancyServices() {
   return (
-    <section className="py-20 bg-brand-light border-y border-brand-dark/5">
+    <section className="py-24 bg-brand-light border-y border-brand-dark/5">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-[2px] w-12 bg-brand-orange" />
             <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
-              Our Expertise
+              Specialized Support
             </span>
             <div className="h-[2px] w-12 bg-brand-orange" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-dark uppercase tracking-tighter">
-            Consultancy <span className="text-brand-orange">Services</span>.
+          <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
+            Consultancy <span className="text-brand-orange">Service</span>.
           </h2>
+          <p className="text-brand-dark/40 mt-6 max-w-2xl mx-auto font-light">
+            Providing expert guidance to Owners, Designers, and Contractors to ensure project excellence and problem resolution.
+          </p>
         </div>
         
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {consultancyServices.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-center justify-center text-center group"
+              className="bg-white p-8 border border-brand-dark/5 hover:border-brand-orange/20 transition-all duration-300 group text-center"
             >
-              <div className="text-lg md:text-xl font-bold text-brand-dark uppercase tracking-widest group-hover:text-brand-orange transition-colors">
-                {service.name}
+              <div className="w-12 h-12 bg-brand-light flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-orange transition-colors">
+                <service.icon className="w-6 h-6 text-brand-orange group-hover:text-white transition-colors" />
               </div>
+              <h3 className="text-sm font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-brand-orange transition-colors min-h-[40px] flex items-center justify-center">
+                {service.name}
+              </h3>
+              <p className="text-brand-dark/50 text-[10px] leading-relaxed font-light">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>

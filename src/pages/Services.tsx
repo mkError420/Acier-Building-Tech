@@ -2,40 +2,6 @@ import Services from "@/components/Services";
 import ConsultancyServices from "@/components/ConsultancyServices";
 import CTA from "@/components/CTA";
 import { motion } from "motion/react";
-import { CheckCircle2, ShieldCheck, Clock, Zap, Target, Award } from "lucide-react";
-
-const whyChooseUs = [
-  {
-    title: "Precision Engineering",
-    description: "We use advanced BIM and CAD software to ensure every structural component is engineered to exact specifications.",
-    icon: Target
-  },
-  {
-    title: "Safety First",
-    description: "Our construction sites adhere to the strictest safety protocols, ensuring a zero-accident environment.",
-    icon: ShieldCheck
-  },
-  {
-    title: "Timely Delivery",
-    description: "We understand the importance of project timelines and use efficient project management to deliver on time.",
-    icon: Clock
-  },
-  {
-    title: "Innovative Solutions",
-    description: "We stay ahead of the curve by implementing the latest building technologies and sustainable methods.",
-    icon: Zap
-  },
-  {
-    title: "Certified Quality",
-    description: "All our materials and processes are certified to meet international building standards and codes.",
-    icon: Award
-  },
-  {
-    title: "Expert Support",
-    description: "Our team of engineers and consultants provides end-to-end support throughout the project lifecycle.",
-    icon: CheckCircle2
-  }
-];
 
 export default function ServicesPage() {
   return (
@@ -70,7 +36,7 @@ export default function ServicesPage() {
               <span className="text-brand-orange">Building</span> Solutions.
             </h1>
             <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
-              From structural engineering to steel fabrication and construction management, we provide end-to-end services for industrial, commercial, and residential projects.
+              From construction and design management to specialized consultancy, we provide end-to-end expertise for your infrastructure projects.
             </p>
           </motion.div>
         </div>
@@ -78,47 +44,6 @@ export default function ServicesPage() {
 
       {/* Main Services Section */}
       <Services />
-
-      {/* Why Choose Us Section */}
-      <section className="py-24 bg-brand-light">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
-                The Acier Advantage
-              </span>
-              <div className="h-[2px] w-12 bg-brand-orange" />
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
-              Why <span className="text-brand-orange">Choose</span> Us.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-10 border border-brand-dark/5 hover:border-brand-orange/20 transition-all duration-300 group"
-              >
-                <div className="w-14 h-14 bg-brand-light flex items-center justify-center mb-8 group-hover:bg-brand-orange transition-colors duration-500">
-                  <item.icon className="w-7 h-7 text-brand-orange group-hover:text-white transition-colors" />
-                </div>
-                <h3 className="text-xl font-bold text-brand-dark mb-4 uppercase tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="text-brand-dark/60 text-sm font-light leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Consultancy Services Section */}
       <ConsultancyServices />
