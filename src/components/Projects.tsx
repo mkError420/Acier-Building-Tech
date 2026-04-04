@@ -62,15 +62,22 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`group relative overflow-hidden ${
                 index === 0 ? "lg:col-span-8 lg:row-span-2" : "lg:col-span-4"
-              }`}
+              } ${index === 0 ? "aspect-[16/10] lg:aspect-auto lg:h-[600px]" : "aspect-[16/10] lg:aspect-auto lg:h-[284px]"}`}
             >
-              <div className="aspect-[16/10] lg:aspect-auto lg:h-full overflow-hidden relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="w-full h-full overflow-hidden relative">
+                <motion.div
+                  initial={{ scale: 1.2 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  className="w-full h-full"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-80" />
                 
                 <div className="absolute top-8 left-8 flex flex-col gap-2">

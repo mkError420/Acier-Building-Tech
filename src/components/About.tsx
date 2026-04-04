@@ -53,8 +53,15 @@ export default function About({ showButton = true }: AboutProps) {
             </div>
 
             <div className="flex flex-wrap gap-12 mb-12">
-              {features.map((feature) => (
-                <div key={feature.title} className="flex flex-col gap-4 max-w-[200px]">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex flex-col gap-4 max-w-[200px]"
+                >
                   <feature.icon className="w-10 h-10 text-brand-orange" />
                   <h3 className="text-lg font-bold text-brand-dark uppercase tracking-tight">
                     {feature.title}
@@ -62,7 +69,7 @@ export default function About({ showButton = true }: AboutProps) {
                   <p className="text-brand-dark/50 text-xs font-light leading-relaxed">
                     {feature.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -94,10 +101,21 @@ export default function About({ showButton = true }: AboutProps) {
             </div>
             
             {/* Experience badge */}
-            <div className="absolute -bottom-10 -left-10 bg-brand-orange p-12 text-white shadow-2xl transform -rotate-3">
-              <div className="text-6xl font-bold mb-2">13+</div>
-              <div className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-80">Years of <br /> Excellence</div>
-            </div>
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="absolute -bottom-10 -left-10 bg-brand-orange p-12 text-white shadow-2xl transform -rotate-3"
+            >
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="text-6xl font-bold mb-2">13+</div>
+                <div className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-80">Years of <br /> Excellence</div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

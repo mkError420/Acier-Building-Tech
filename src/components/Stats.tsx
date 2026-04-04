@@ -1,12 +1,33 @@
-import { motion } from "motion/react";
+import { motion, useSpring, useTransform, useInView } from "motion/react";
 import { Building2, HardHat, Hammer, Award } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { label: "Projects Completed", value: "500+", icon: Building2 },
-  { label: "Expert Engineers", value: "150+", icon: HardHat },
-  { label: "Years Experience", value: "25+", icon: Hammer },
-  { label: "Awards Won", value: "12", icon: Award },
+  { label: "Projects Completed", value: 500, suffix: "+", icon: Building2 },
+  { label: "Expert Engineers", value: 150, suffix: "+", icon: HardHat },
+  { label: "Years Experience", value: 25, suffix: "+", icon: Hammer },
+  { label: "Awards Won", value: 12, suffix: "", icon: Award },
 ];
+
+function Counter({ value, suffix }: { value: number; suffix: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const spring = useSpring(0, { stiffness: 50, damping: 20 });
+  const displayValue = useTransform(spring, (latest) => Math.floor(latest));
+
+  useEffect(() => {
+    if (isInView) {
+      spring.set(value);
+    }
+  }, [isInView, value, spring]);
+
+  return (
+    <span ref={ref}>
+      <motion.span>{displayValue}</motion.span>
+      {suffix}
+    </span>
+  );
+}
 
 export default function Stats() {
   return (
@@ -26,7 +47,7 @@ export default function Stats() {
                 <stat.icon className="w-8 h-8 text-brand-orange group-hover:text-white transition-colors" />
               </div>
               <div className="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tighter">
-                {stat.value}
+                <Counter value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">
                 {stat.label}

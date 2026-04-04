@@ -57,11 +57,12 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.href}
-              className={`text-[10px] xl:text-sm font-medium uppercase tracking-widest hover:text-brand-orange transition-colors ${
+              className={`text-[10px] xl:text-sm font-medium uppercase tracking-widest hover:text-brand-orange transition-colors relative group/nav ${
                 location.pathname === link.href ? "text-brand-orange" : "text-white/90"
               }`}
             >
               {link.name}
+              <span className={`absolute -bottom-1 left-0 h-[1px] bg-brand-orange transition-all duration-300 ${location.pathname === link.href ? "w-full" : "w-0 group-hover/nav:w-full"}`} />
             </Link>
           ))}
           <Link to="/contact">

@@ -38,9 +38,30 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-6xl md:text-7xl font-bold text-white leading-[0.9] tracking-tighter mb-8 uppercase"
             >
-              Building <br />
-              <span className="text-brand-orange">Structures</span> <br />
-              That Last.
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="inline-block"
+              >
+                Building
+              </motion.span> <br />
+              <motion.span
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-brand-orange inline-block"
+              >
+                Structures
+              </motion.span> <br />
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="inline-block"
+              >
+                That Last.
+              </motion.span>
             </motion.h1>
 
             <motion.p
