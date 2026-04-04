@@ -56,24 +56,82 @@ const timeline = [
 
 const team = [
   {
-    name: "Engr. Md. Khairul Rabbani",
+    name: "Munni Khanam",
+    role: "Chairman",
+    description: "B.Com (Honors), M.Com (Accounting), MBA (Finance)",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Engr. Anowarul Kabir",
     role: "Managing Director",
+    description: "Over 25 years of experience in the construction industry, mainly in Bangladesh and the Middle East.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Engr. Moniruzzaman Rayhan",
+    role: "Team Leader",
+    description: "Over 6 years in the construction industry, mainly in Bangladesh with exposure in the Steel Design & Construction.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Engr. Zahedur Rahman Gazi",
+    role: "Project Coordinator",
+    description: "Over 24 years in the construction industry, mainly in Bangladesh Real Estate Sector & the Steel Construction.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
   },
   {
-    name: "Sarah Jenkins",
-    role: "Chief Structural Engineer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
+    name: "Shafiqur Rahman",
+    role: "Legal Advisor & COO (Co-Founder)",
+    description: "Bachelor of Law (LLB Honours) Open University (UK), LLB with International Law (LLB) Kingston University",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
   },
   {
-    name: "David Chen",
-    role: "Project Director",
+    name: "Md. Shaheen Sharif",
+    role: "Executive Director (Co-Founder)",
+    description: "English Honors & MBA Goldsmith University of London",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
   },
   {
-    name: "Michael Rodriguez",
-    role: "Operations Manager",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+    name: "Md. Millat Hossain",
+    role: "Human Resources",
+    description: "B.Com Accounting, M.Com Accounting Manager",
+    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Md. Hafiz al Asad Akash",
+    role: "Manager (Accounts)",
+    description: "B.Com Accounting, M.Com Accounting.",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Engr. Muhammad Saiful Islam",
+    role: "Senior Structure Engineer",
+    description: "B.Sc in Civil Engineering - BUET (FIEB no.12487)",
+    image: "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Engr. Rita Khatun",
+    role: "Structural Designer",
+    description: "B.Sc. In Civil Engineering (Duet)",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Md. Kaisar Hossain",
+    role: "Architect",
+    description: "B. Arch - BUET",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Engr. Abdullah Al Razi Khan Chowdhury",
+    role: "Project Manager",
+    description: "B.Sc in Civil Engineering",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Md. Humain Kabir",
+    role: "Electrical Engineer",
+    description: "B.Sc in Electrical Engineer",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
   }
 ];
 
@@ -277,7 +335,7 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -297,7 +355,8 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
                   <div className="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <h3 className="text-xl font-bold text-brand-dark uppercase tracking-tight mb-1">{member.name}</h3>
-                <p className="text-brand-orange text-xs font-bold uppercase tracking-widest">{member.role}</p>
+                <p className="text-brand-orange text-xs font-bold uppercase tracking-widest mb-3">{member.role}</p>
+                <p className="text-brand-dark/60 text-sm leading-relaxed font-light">{member.description}</p>
               </motion.div>
             ))}
           </div>
@@ -309,3 +368,4 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
     </div>
   );
 }
+
