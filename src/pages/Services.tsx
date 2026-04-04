@@ -41,15 +41,15 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 bg-brand-dark overflow-hidden">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000"
-            alt="Services Hero"
-            className="w-full h-full object-cover opacity-30 grayscale"
+            src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=2000"
+            alt="Industrial Site"
+            className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark to-brand-dark" />
+          <div className="absolute inset-0 bg-brand-dark/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -65,11 +65,11 @@ export default function ServicesPage() {
                 Our Expertise
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8">
+            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
               Comprehensive <br />
               <span className="text-brand-orange">Building</span> Solutions.
             </h1>
-            <p className="text-white/60 text-lg md:text-xl leading-relaxed font-light">
+            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
               From structural engineering to steel fabrication and construction management, we provide end-to-end services for industrial, commercial, and residential projects.
             </p>
           </motion.div>
