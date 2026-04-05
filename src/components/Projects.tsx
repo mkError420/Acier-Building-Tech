@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Building2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -46,10 +47,12 @@ export default function Projects() {
               <span className="text-brand-orange">Projects</span> Showcase.
             </h2>
           </div>
-          <Button variant="outline" className="border-white/20 text-yellow hover:bg-white/10 rounded-none px-8 py-7 text-sm uppercase tracking-widest group">
-            All Projects
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/projects">
+            <Button variant="outline" className="border-white/20 text-yellow hover:bg-white/10 rounded-none px-8 py-7 text-sm uppercase tracking-widest group">
+              All Projects
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
