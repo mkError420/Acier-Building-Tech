@@ -1,15 +1,44 @@
-import { motion } from "motion/react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Building2, HardHat, Hammer } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const heroImages = [
+  {
+    url: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=1000",
+    alt: "Steel Structure Construction"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000",
+    alt: "Engineering and Steel Work"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
+    alt: "Modern Building Construction"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&q=80&w=1000",
+    alt: "Industrial Building Project"
+  }
+];
+
 export default function Hero() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-baby-blue">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=2070"
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2070"
           alt="Construction site"
           className="w-full h-full object-cover opacity-10"
           referrerPolicy="no-referrer"
@@ -99,14 +128,33 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="relative hidden lg:block"
           >
-            <div className="relative z-10 aspect-square max-w-md mx-auto overflow-hidden rounded-[2rem] border-8 border-brand-red/20 shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1000"
-                alt="Construction Site"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-brand-red/10 mix-blend-overlay" />
+            <div className="relative z-10 aspect-square max-w-md mx-auto overflow-hidden rounded-[2rem] border-8 border-brand-red/20 shadow-2xl bg-white">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImage}
+                  src={heroImages[currentImage].url}
+                  alt={heroImages[currentImage].alt}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </AnimatePresence>
+              <div className="absolute inset-0 bg-brand-red/10 mix-blend-overlay pointer-events-none" />
+              
+              {/* Progress indicators */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                {heroImages.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`h-1 transition-all duration-500 rounded-full ${
+                      index === currentImage ? "w-8 bg-brand-red" : "w-2 bg-white/50"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
             
             {/* Decorative elements */}
@@ -123,7 +171,6 @@ export default function Hero() {
         transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[8px] uppercase tracking-[0.5em] text-brand-dark/40 font-bold"></span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-brand-red to-transparent" />
       </motion.div>
     </section>
