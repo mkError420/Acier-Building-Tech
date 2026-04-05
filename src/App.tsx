@@ -17,7 +17,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-brand-light selection:bg-brand-orange selection:text-white">
+      <div className="min-h-screen bg-brand-light selection:bg-brand-red selection:text-white">
         <TopHeader />
         <Navbar />
         <main>

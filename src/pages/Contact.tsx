@@ -7,15 +7,15 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden min-h-[500px] flex items-center bg-brand-dark">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[500px] flex items-center bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
             alt="Contact Us"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-brand-dark/70" />
+          <div className="absolute inset-0 bg-white/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -26,16 +26,16 @@ export default function ContactPage() {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Connect With Us
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-black text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
               Get In <br />
-              <span className="text-brand-orange">Touch</span>.
+              <span className="text-brand-red">Touch</span>.
             </h1>
-            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
+            <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">
               Ready to start your next structural masterpiece? Our team of experts is here to discuss your vision and provide the engineering excellence your project deserves.
             </p>
           </motion.div>
@@ -49,9 +49,9 @@ export default function ContactPage() {
       <section className="py-24 bg-white border-y border-brand-dark/5">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-orange transition-all duration-500 group">
+            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-red transition-all duration-500 group">
               <div className="w-16 h-16 bg-white border border-brand-dark/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <MapPin className="w-8 h-8 text-brand-orange" />
+                <MapPin className="w-8 h-8 text-brand-red" />
               </div>
               <h4 className="text-lg font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-white transition-colors">Our Office</h4>
               <p className="text-brand-dark/60 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
@@ -59,9 +59,9 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-orange transition-all duration-500 group">
+            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-red transition-all duration-500 group">
               <div className="w-16 h-16 bg-white border border-brand-dark/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Phone className="w-8 h-8 text-brand-orange" />
+                <Phone className="w-8 h-8 text-brand-red" />
               </div>
               <h4 className="text-lg font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-white transition-colors">Call Us</h4>
               <p className="text-brand-dark/60 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
@@ -70,9 +70,9 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-orange transition-all duration-500 group">
+            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-red transition-all duration-500 group">
               <div className="w-16 h-16 bg-white border border-brand-dark/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Mail className="w-8 h-8 text-brand-orange" />
+                <Mail className="w-8 h-8 text-brand-red" />
               </div>
               <h4 className="text-lg font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-white transition-colors">Email Us</h4>
               <p className="text-brand-dark/60 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
@@ -81,9 +81,9 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-orange transition-all duration-500 group">
+            <div className="flex flex-col items-center text-center p-8 bg-brand-light hover:bg-brand-red transition-all duration-500 group">
               <div className="w-16 h-16 bg-white border border-brand-dark/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Clock className="w-8 h-8 text-brand-orange" />
+                <Clock className="w-8 h-8 text-brand-red" />
               </div>
               <h4 className="text-lg font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-white transition-colors">Working Hours</h4>
               <p className="text-brand-dark/60 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
@@ -113,7 +113,7 @@ export default function ContactPage() {
           ></iframe>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-          <div className="bg-brand-orange text-white p-6 shadow-2xl animate-bounce">
+          <div className="bg-brand-red text-white p-6 shadow-2xl animate-bounce">
             <MapPin className="w-8 h-8" />
           </div>
         </div>

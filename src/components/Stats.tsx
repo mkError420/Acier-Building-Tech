@@ -31,7 +31,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-brand-dark border-y border-white/5">
+    <section className="py-20 bg-white border-y border-brand-dark/5">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
           {stats.map((stat, index) => (
@@ -43,13 +43,13 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex flex-col items-center text-center group"
             >
-              <div className="w-16 h-16 bg-white/5 border border-white/10 flex items-center justify-center rounded-none mb-6 group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-500">
-                <stat.icon className="w-8 h-8 text-brand-orange group-hover:text-white transition-colors" />
+              <div className="w-16 h-16 bg-brand-dark/5 border border-brand-dark/10 flex items-center justify-center rounded-none mb-6 group-hover:bg-brand-red group-hover:border-brand-red transition-all duration-500">
+                <stat.icon className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tighter">
+              <div className="text-4xl md:text-5xl font-bold text-brand-dark mb-2 tracking-tighter">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">
+              <div className="text-brand-dark/40 text-[10px] uppercase tracking-[0.3em] font-bold">
                 {stat.label}
               </div>
             </motion.div>

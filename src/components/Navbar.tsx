@@ -36,17 +36,17 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled || !isHomePage ? "bg-brand-dark/95 backdrop-blur-md border-b border-white/10 top-0" : "bg-transparent top-0 md:top-10"
+        scrolled || !isHomePage ? "bg-white/95 backdrop-blur-md border-b border-brand-dark/10 top-0" : "bg-transparent top-0 md:top-10"
       }`}
     >
       <div className={`container mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled || !isHomePage ? "py-3" : "py-6"}`}>
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-brand-orange p-1.5 rounded-sm transform group-hover:rotate-12 transition-transform">
+          <div className="bg-brand-red p-1.5 rounded-sm transform group-hover:rotate-12 transition-transform">
             <Building2 className="w-6 h-6 text-white" />
           </div>
           <div className="font-logo text-lg md:text-2xl flex items-center gap-1 md:gap-2 font-bold">
             <span className="text-red-500">acieR</span>
-            <span className="text-white">building</span>
+            <span className="text-brand-dark">building</span>
             <span className="text-red-500">technology</span>
           </div>
         </Link>
@@ -57,16 +57,18 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.href}
-              className={`text-[10px] xl:text-sm font-medium uppercase tracking-widest hover:text-brand-orange transition-colors relative group/nav ${
-                location.pathname === link.href ? "text-brand-orange" : "text-white/90"
+              className={`text-[10px] xl:text-sm font-medium uppercase tracking-widest hover:text-brand-red transition-colors relative group/nav ${
+                location.pathname === link.href 
+                  ? "text-brand-red" 
+                  : "text-brand-dark/90"
               }`}
             >
               {link.name}
-              <span className={`absolute -bottom-1 left-0 h-[1px] bg-brand-orange transition-all duration-300 ${location.pathname === link.href ? "w-full" : "w-0 group-hover/nav:w-full"}`} />
+              <span className={`absolute -bottom-1 left-0 h-[1px] bg-brand-red transition-all duration-300 ${location.pathname === link.href ? "w-full" : "w-0 group-hover/nav:w-full"}`} />
             </Link>
           ))}
           <Link to="/contact">
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-none uppercase tracking-widest text-[10px] xl:text-xs px-4 xl:px-6">
+            <Button className="bg-brand-red hover:bg-brand-red/90 text-white rounded-none uppercase tracking-widest text-[10px] xl:text-xs px-4 xl:px-6">
               Get a Quote
             </Button>
           </Link>
@@ -76,7 +78,7 @@ export default function Navbar() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className={`lg:hidden p-2 text-white`}
+          className={`lg:hidden p-2 transition-colors duration-500 text-brand-dark`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -90,7 +92,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-brand-dark border-b border-white/10 lg:hidden"
+            className="absolute top-full left-0 right-0 bg-white border-b border-brand-dark/10 lg:hidden"
           >
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (
@@ -98,15 +100,15 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   className={`text-lg font-medium uppercase tracking-widest flex items-center justify-between group transition-colors ${
-                    location.pathname === link.href ? "text-brand-orange" : "text-white/80"
+                    location.pathname === link.href ? "text-brand-red" : "text-brand-dark/80"
                   }`}
                 >
                   {link.name}
-                  <ChevronRight className={`w-4 h-4 transition-all ${location.pathname === link.href ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"} text-brand-orange`} />
+                  <ChevronRight className={`w-4 h-4 transition-all ${location.pathname === link.href ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"} text-brand-red`} />
                 </Link>
               ))}
               <Link to="/contact">
-                <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-none uppercase tracking-widest mt-4 w-full">
+                <Button className="bg-brand-red hover:bg-brand-red/90 text-white rounded-none uppercase tracking-widest mt-4 w-full">
                   Get a Quote
                 </Button>
               </Link>

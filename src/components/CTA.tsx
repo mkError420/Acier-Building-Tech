@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
-    <section className="py-24 bg-brand-orange relative overflow-hidden">
+    <section className="py-24 bg-brand-red relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 -z-0 hidden lg:block" />
       <div className="absolute bottom-0 left-0 w-1/4 h-full bg-brand-dark/5 -z-0 hidden lg:block" />
       

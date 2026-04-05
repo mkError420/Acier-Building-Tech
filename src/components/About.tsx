@@ -32,14 +32,14 @@ export default function About({ showButton = true }: AboutProps) {
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="lg:w-1/2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Legacy
               </span>
             </div>
             <h2 className="text-5xl md:text-8xl font-bold text-brand-dark leading-[0.9] tracking-tighter uppercase mb-10">
               Forging <br />
-              <span className="text-brand-orange">Strength</span> <br />
+              <span className="text-brand-red">Strength</span> <br />
               Into Form.
             </h2>
             
@@ -62,7 +62,7 @@ export default function About({ showButton = true }: AboutProps) {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex flex-col gap-4 max-w-[200px]"
                 >
-                  <feature.icon className="w-10 h-10 text-brand-orange" />
+                  <feature.icon className="w-10 h-10 text-brand-red" />
                   <h3 className="text-lg font-bold text-brand-dark uppercase tracking-tight">
                     {feature.title}
                   </h3>
@@ -106,7 +106,7 @@ export default function About({ showButton = true }: AboutProps) {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="absolute -bottom-10 -left-10 bg-brand-orange p-12 text-white shadow-2xl transform -rotate-3"
+              className="absolute -bottom-10 -left-10 bg-brand-red p-12 text-white shadow-2xl transform -rotate-3"
             >
               <motion.div
                 animate={{ y: [0, -10, 0] }}

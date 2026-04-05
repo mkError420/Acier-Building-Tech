@@ -139,15 +139,15 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-brand-dark">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000"
             alt="About Acier"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-white/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -158,16 +158,16 @@ export default function AboutPage() {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Identity
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-bold text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
               Engineering <br />
-              <span className="text-brand-orange">Excellence</span>.
+              <span className="text-brand-red">Excellence</span>.
             </h1>
-            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
+            <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">
               Since 2012, we have been at the forefront of structural innovation, building the backbone of modern infrastructure.
             </p>
           </motion.div>
@@ -185,10 +185,10 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-12 shadow-xl border-l-8 border-brand-orange"
+              className="bg-white p-12 shadow-xl border-l-8 border-brand-red"
             >
               <div className="w-16 h-16 bg-brand-light flex items-center justify-center mb-8">
-                <Target className="w-8 h-8 text-brand-orange" />
+                <Target className="w-8 h-8 text-brand-red" />
               </div>
               <h2 className="text-3xl font-bold text-brand-dark uppercase tracking-tighter mb-6">Our Mission</h2>
               <p className="text-brand-dark/70 leading-relaxed text-lg">
@@ -202,13 +202,13 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-brand-dark p-12 shadow-xl border-l-8 border-brand-orange"
+              className="bg-white p-12 shadow-xl border-l-8 border-brand-red"
             >
-              <div className="w-16 h-16 bg-white/10 flex items-center justify-center mb-8">
-                <Eye className="w-8 h-8 text-brand-orange" />
+              <div className="w-16 h-16 bg-brand-light flex items-center justify-center mb-8">
+                <Eye className="w-8 h-8 text-brand-red" />
               </div>
-              <h2 className="text-3xl font-bold text-white uppercase tracking-tighter mb-6">Our Vision</h2>
-              <p className="text-white/70 leading-relaxed text-lg">
+              <h2 className="text-3xl font-bold text-brand-dark uppercase tracking-tighter mb-6">Our Vision</h2>
+              <p className="text-brand-dark/70 leading-relaxed text-lg">
                At acieR Building Technology, our vision is to be a leading force in the construction and building solutions industry by delivering innovative, sustainable, and high-quality projects. We aim to transform spaces through excellence in RCC and steel construction, interior design, and material manufacturing, including eco-friendly solutions like hemp blocks and parking tiles. By combining advanced design, precision fabrication, and reliable installation services, we strive to create structures that are not only functional and durable but also aesthetically inspiring, contributing to a smarter and greener built environment for the country and beyond.
               </p>
             </motion.div>
@@ -221,14 +221,14 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 What Drives Us
               </span>
-              <div className="h-[2px] w-12 bg-brand-orange" />
+              <div className="h-[2px] w-12 bg-brand-red" />
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
-              Our Core <span className="text-brand-orange">Values</span>.
+              Our Core <span className="text-brand-red">Values</span>.
             </h2>
           </div>
 
@@ -240,10 +240,10 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-8 border border-brand-dark/5 hover:border-brand-orange/20 transition-all duration-300 group"
+                className="p-8 border border-brand-dark/5 hover:border-brand-red/20 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-brand-light flex items-center justify-center mb-6 group-hover:bg-brand-orange transition-colors">
-                  <value.icon className="w-6 h-6 text-brand-orange group-hover:text-white transition-colors" />
+                <div className="w-12 h-12 bg-brand-light flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors">
+                  <value.icon className="w-6 h-6 text-brand-red group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-brand-dark mb-4 uppercase tracking-tight">{value.title}</h3>
                 <p className="text-brand-dark/60 text-sm leading-relaxed">{value.description}</p>
@@ -254,28 +254,28 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 bg-brand-dark relative overflow-hidden">
+      <section className="py-24 bg-white relative overflow-hidden border-t border-brand-dark/5">
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-orange via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-red via-transparent to-transparent" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Journey
               </span>
-              <div className="h-[2px] w-12 bg-brand-orange" />
+              <div className="h-[2px] w-12 bg-brand-red" />
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white uppercase tracking-tighter">
-              Milestones <span className="text-brand-orange">Through</span> Time.
+            <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
+              Milestones <span className="text-brand-red">Through</span> Time.
             </h2>
           </div>
 
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-brand-dark/10 -translate-x-1/2 hidden md:block" />
             
             <div className="space-y-12">
               {timeline.map((item, index) => (
@@ -290,15 +290,15 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
                   <div className="flex-1 text-left md:text-right w-full">
                     {index % 2 !== 0 && (
                       <div className="md:pr-12">
-                        <span className="text-brand-orange text-4xl font-bold mb-2 block">{item.year}</span>
-                        <h3 className="text-xl font-bold text-white uppercase mb-2">{item.title}</h3>
-                        <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+                        <span className="text-brand-red text-4xl font-bold mb-2 block">{item.year}</span>
+                        <h3 className="text-xl font-bold text-brand-dark uppercase mb-2">{item.title}</h3>
+                        <p className="text-brand-dark/50 text-sm leading-relaxed">{item.description}</p>
                       </div>
                     )}
                   </div>
                   
                   <div className="relative z-20">
-                    <div className="w-12 h-12 bg-brand-orange flex items-center justify-center rounded-full border-4 border-brand-dark">
+                    <div className="w-12 h-12 bg-brand-red flex items-center justify-center rounded-full border-4 border-white">
                       <History className="w-5 h-5 text-white" />
                     </div>
                   </div>
@@ -306,9 +306,9 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
                   <div className="flex-1 text-left w-full">
                     {index % 2 === 0 && (
                       <div className="md:pl-12">
-                        <span className="text-brand-orange text-4xl font-bold mb-2 block">{item.year}</span>
-                        <h3 className="text-xl font-bold text-white uppercase mb-2">{item.title}</h3>
-                        <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+                        <span className="text-brand-red text-4xl font-bold mb-2 block">{item.year}</span>
+                        <h3 className="text-xl font-bold text-brand-dark uppercase mb-2">{item.title}</h3>
+                        <p className="text-brand-dark/50 text-sm leading-relaxed">{item.description}</p>
                       </div>
                     )}
                   </div>
@@ -324,14 +324,14 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Leadership
               </span>
-              <div className="h-[2px] w-12 bg-brand-orange" />
+              <div className="h-[2px] w-12 bg-brand-red" />
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
-              The Minds <span className="text-brand-orange">Behind</span> Acier.
+              The Minds <span className="text-brand-red">Behind</span> Acier.
             </h2>
           </div>
 
@@ -352,10 +352,10 @@ Through a customer-focused approach, skilled workforce, and advanced technologie
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-brand-orange/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-brand-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <h3 className="text-xl font-bold text-brand-dark uppercase tracking-tight mb-1">{member.name}</h3>
-                <p className="text-brand-orange text-xs font-bold uppercase tracking-widest mb-3">{member.role}</p>
+                <p className="text-brand-red text-xs font-bold uppercase tracking-widest mb-3">{member.role}</p>
                 <p className="text-brand-dark/60 text-sm leading-relaxed font-light">{member.description}</p>
               </motion.div>
             ))}

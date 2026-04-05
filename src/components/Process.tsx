@@ -34,14 +34,14 @@ export default function Process() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-[2px] w-12 bg-brand-orange" />
-            <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+            <div className="h-[2px] w-12 bg-brand-red" />
+            <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
               How We Work
             </span>
-            <div className="h-[2px] w-12 bg-brand-orange" />
+            <div className="h-[2px] w-12 bg-brand-red" />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
-            Our <span className="text-brand-orange">Seamless</span> Process.
+            Our <span className="text-brand-red">Seamless</span> Process.
           </h2>
         </div>
 
@@ -59,10 +59,10 @@ export default function Process() {
               className="relative z-10 group"
             >
               <div className="mb-8 relative">
-                <div className="w-20 h-20 bg-brand-light border border-brand-dark/5 flex items-center justify-center rounded-none group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-500 transform group-hover:rotate-[15deg]">
-                  <step.icon className="w-8 h-8 text-brand-orange group-hover:text-white transition-colors" />
+                <div className="w-20 h-20 bg-brand-light border border-brand-dark/5 flex items-center justify-center rounded-none group-hover:bg-brand-red group-hover:border-brand-red transition-all duration-500 transform group-hover:rotate-[15deg]">
+                  <step.icon className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
                 </div>
-                <div className="absolute -top-4 -right-4 text-6xl font-bold text-brand-dark/5 group-hover:text-brand-orange/10 transition-colors pointer-events-none">
+                <div className="absolute -top-4 -right-4 text-6xl font-bold text-brand-dark/5 group-hover:text-brand-red/10 transition-colors pointer-events-none">
                   {step.step}
                 </div>
               </div>

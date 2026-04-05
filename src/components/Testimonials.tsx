@@ -24,26 +24,26 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-brand-dark overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden border-t border-brand-dark/5">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Client Feedback
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tighter uppercase">
-              What Our <span className="text-brand-orange">Clients</span> Say.
+            <h2 className="text-4xl md:text-6xl font-bold text-brand-dark leading-tight tracking-tighter uppercase">
+              What Our <span className="text-brand-red">Clients</span> Say.
             </h2>
           </div>
           <div className="flex gap-2">
-            <div className="w-12 h-12 border border-white/10 flex items-center justify-center rounded-none hover:bg-brand-orange hover:border-brand-orange transition-all cursor-pointer">
-              <Quote className="w-5 h-5 text-white rotate-180" />
+            <div className="w-12 h-12 border border-brand-dark/10 flex items-center justify-center rounded-none hover:bg-brand-red hover:border-brand-red transition-all cursor-pointer group">
+              <Quote className="w-5 h-5 text-brand-dark group-hover:text-white rotate-180" />
             </div>
-            <div className="w-12 h-12 border border-white/10 flex items-center justify-center rounded-none hover:bg-brand-orange hover:border-brand-orange transition-all cursor-pointer">
-              <Quote className="w-5 h-5 text-white" />
+            <div className="w-12 h-12 border border-brand-dark/10 flex items-center justify-center rounded-none hover:bg-brand-red hover:border-brand-red transition-all cursor-pointer group">
+              <Quote className="w-5 h-5 text-brand-dark group-hover:text-white" />
             </div>
           </div>
         </div>
@@ -56,28 +56,28 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white/5 border border-white/10 p-10 relative group hover:bg-white/10 transition-all duration-300"
+              className="bg-brand-light border border-brand-dark/5 p-10 relative group hover:bg-white hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-brand-orange fill-brand-orange" />
+                  <Star key={i} className="w-4 h-4 text-brand-red fill-brand-red" />
                 ))}
               </div>
               
-              <p className="text-white/80 text-lg italic mb-8 leading-relaxed font-light">
+              <p className="text-brand-dark/80 text-lg italic mb-8 leading-relaxed font-light">
                 "{testimonial.content}"
               </p>
               
               <div>
-                <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-1">
+                <h4 className="text-brand-dark font-bold uppercase tracking-widest text-sm mb-1">
                   {testimonial.name}
                 </h4>
-                <p className="text-white/40 text-xs uppercase tracking-widest font-bold">
+                <p className="text-brand-dark/40 text-xs uppercase tracking-widest font-bold">
                   {testimonial.role}
                 </p>
               </div>
               
-              <Quote className="absolute top-10 right-10 w-12 h-12 text-white/5 group-hover:text-brand-orange/10 transition-colors" />
+              <Quote className="absolute top-10 right-10 w-12 h-12 text-brand-dark/5 group-hover:text-brand-red/10 transition-colors" />
             </motion.div>
           ))}
         </div>

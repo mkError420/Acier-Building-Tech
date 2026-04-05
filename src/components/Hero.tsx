@@ -5,16 +5,16 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-dark">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=2070"
           alt="Construction site"
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+          className="w-full h-full object-cover opacity-10"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -26,8 +26,8 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               className="flex items-center gap-3 mb-6"
             >
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Engineering the Future
               </span>
             </motion.div>
@@ -36,7 +36,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-7xl font-bold text-white leading-[0.9] tracking-tighter mb-8 uppercase"
+              className="text-6xl md:text-7xl font-bold text-brand-dark leading-[0.9] tracking-tighter mb-8 uppercase"
             >
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -50,7 +50,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-brand-orange inline-block"
+                className="text-brand-red inline-block"
               >
                 Structures
               </motion.span> <br />
@@ -68,7 +68,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-white/60 text-lg md:text-xl mb-10 leading-relaxed font-light"
+              className="text-brand-dark/60 text-lg md:text-xl mb-10 leading-relaxed font-light"
             >
               Our Commitment Since 2012. Since 2012, acieR Building Technology has been dedicated to delivering high-quality construction services across residential, commercial, and humanitarian sectors.
             </motion.p>
@@ -80,13 +80,13 @@ export default function Hero() {
               className="flex flex-wrap gap-4"
             >
               <Link to="/projects">
-                <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-none px-8 py-7 text-sm uppercase tracking-widest group">
+                <Button className="bg-brand-red hover:bg-brand-red/90 text-white rounded-none px-8 py-7 text-sm uppercase tracking-widest group">
                   View Projects
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" className="border-white/20 text-dark hover:bg-white/10 rounded-none px-8 py-7 text-sm uppercase tracking-widest">
+                <Button variant="outline" className="border-brand-dark/20 text-brand-dark hover:bg-brand-dark/5 rounded-none px-8 py-7 text-sm uppercase tracking-widest">
                   Our Services
                 </Button>
               </Link>
@@ -99,19 +99,19 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="relative hidden lg:block"
           >
-            <div className="relative z-10 aspect-square max-w-md mx-auto overflow-hidden rounded-[2rem] border-8 border-brand-orange/20 shadow-2xl">
+            <div className="relative z-10 aspect-square max-w-md mx-auto overflow-hidden rounded-[2rem] border-8 border-brand-red/20 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1000"
                 alt="Construction Site"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-brand-orange/10 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-brand-red/10 mix-blend-overlay" />
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-brand-orange/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-orange/20 rounded-full blur-3xl animate-pulse delay-700" />
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-brand-red/20 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-red/20 rounded-full blur-3xl animate-pulse delay-700" />
           </motion.div>
         </div>
       </div>
@@ -123,8 +123,8 @@ export default function Hero() {
         transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[8px] uppercase tracking-[0.5em] text-white/40 font-bold"></span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-brand-orange to-transparent" />
+        <span className="text-[8px] uppercase tracking-[0.5em] text-brand-dark/40 font-bold"></span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-brand-red to-transparent" />
       </motion.div>
     </section>
   );

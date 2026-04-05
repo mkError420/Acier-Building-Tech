@@ -35,14 +35,14 @@ export default function ConsultancyServices() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-[2px] w-12 bg-brand-orange" />
-            <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+            <div className="h-[2px] w-12 bg-brand-red" />
+            <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
               Specialized Support
             </span>
-            <div className="h-[2px] w-12 bg-brand-orange" />
+            <div className="h-[2px] w-12 bg-brand-red" />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-brand-dark uppercase tracking-tighter">
-            Consultancy <span className="text-brand-orange">Service</span>.
+            Consultancy <span className="text-brand-red">Service</span>.
           </h2>
           <p className="text-brand-dark/40 mt-6 max-w-2xl mx-auto font-light">
             Providing expert guidance to Owners, Designers, and Contractors to ensure project excellence and problem resolution.
@@ -57,12 +57,12 @@ export default function ConsultancyServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 border border-brand-dark/5 hover:border-brand-orange/20 transition-all duration-300 group text-center"
+              className="bg-white p-8 border border-brand-dark/5 hover:border-brand-red/20 transition-all duration-300 group text-center"
             >
-              <div className="w-12 h-12 bg-brand-light flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-orange transition-colors">
-                <service.icon className="w-6 h-6 text-brand-orange group-hover:text-white transition-colors" />
+              <div className="w-12 h-12 bg-brand-light flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-red transition-colors">
+                <service.icon className="w-6 h-6 text-brand-red group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-sm font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-brand-orange transition-colors min-h-[40px] flex items-center justify-center">
+              <h3 className="text-sm font-bold text-brand-dark uppercase tracking-widest mb-4 group-hover:text-brand-red transition-colors min-h-[40px] flex items-center justify-center">
                 {service.name}
               </h3>
               <p className="text-brand-dark/50 text-[10px] leading-relaxed font-light">

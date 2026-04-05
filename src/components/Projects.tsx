@@ -32,23 +32,23 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-brand-dark overflow-hidden">
+    <section id="projects" className="py-24 bg-white overflow-hidden border-t border-brand-dark/5">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Portfolio
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tighter uppercase">
+            <h2 className="text-4xl md:text-6xl font-bold text-brand-dark leading-tight tracking-tighter uppercase">
               Featured <br />
-              <span className="text-brand-orange">Projects</span> Showcase.
+              <span className="text-brand-red">Projects</span> Showcase.
             </h2>
           </div>
           <Link to="/projects">
-            <Button variant="outline" className="border-white/20 text-yellow hover:bg-white/10 rounded-none px-8 py-7 text-sm uppercase tracking-widest group">
+            <Button variant="outline" className="border-brand-dark/10 text-brand-dark hover:bg-brand-dark/5 rounded-none px-8 py-7 text-sm uppercase tracking-widest group">
               All Projects
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -84,7 +84,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-80" />
                 
                 <div className="absolute top-8 left-8 flex flex-col gap-2">
-                  <div className="bg-brand-orange text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest self-start">
+                  <div className="bg-brand-red text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest self-start">
                     {project.category}
                   </div>
                 </div>
@@ -97,11 +97,11 @@ export default function Projects() {
                       {project.title}
                     </h3>
                     <div className="flex items-center gap-2 text-white/60 text-xs font-bold uppercase tracking-widest">
-                      <MapPin className="w-3 h-3 text-brand-orange" />
+                      <MapPin className="w-3 h-3 text-brand-red" />
                       {project.location}
                     </div>
                   </div>
-                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-500">
+                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-brand-red group-hover:border-brand-red transition-all duration-500">
                     <ArrowRight className="w-6 h-6 text-white" />
                   </div>
                 </div>

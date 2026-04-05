@@ -34,13 +34,13 @@ export default function FAQ() {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-4 justify-center">
-            <div className="h-[2px] w-12 bg-brand-orange" />
-            <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+            <div className="h-[2px] w-12 bg-brand-red" />
+            <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
               Common Questions
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-brand-dark text-center uppercase tracking-tighter mb-16">
-            Frequently Asked <span className="text-brand-orange">Questions</span>.
+            Frequently Asked <span className="text-brand-red">Questions</span>.
           </h2>
 
           <div className="space-y-4">
@@ -54,11 +54,11 @@ export default function FAQ() {
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-8 py-6 flex items-center justify-between text-left group"
                 >
-                  <span className={`text-lg font-bold uppercase tracking-tight transition-colors duration-300 ${openIndex === index ? 'text-brand-orange' : 'text-brand-dark'}`}>
+                  <span className={`text-lg font-bold uppercase tracking-tight transition-colors duration-300 ${openIndex === index ? 'text-brand-red' : 'text-brand-dark'}`}>
                     {faq.question}
                   </span>
-                  <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-brand-orange border-brand-orange rotate-180' : 'border-brand-dark/10 group-hover:border-brand-orange'}`}>
-                    <ChevronDown className={`w-4 h-4 transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-brand-dark/40 group-hover:text-brand-orange'}`} />
+                  <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-brand-red border-brand-red rotate-180' : 'border-brand-dark/10 group-hover:border-brand-red'}`}>
+                    <ChevronDown className={`w-4 h-4 transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-brand-dark/40 group-hover:text-brand-red'}`} />
                   </div>
                 </motion.button>
                 

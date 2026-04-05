@@ -57,15 +57,15 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-brand-dark">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=2000"
             alt="Steel Structure Construction"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-brand-dark/60" />
+          <div className="absolute inset-0 bg-white/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -76,16 +76,16 @@ export default function ProjectsPage() {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Portfolio
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-bold text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
               Structural <br />
-              <span className="text-brand-orange">Milestones</span>.
+              <span className="text-brand-red">Milestones</span>.
             </h1>
-            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
+            <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">
               Explore our diverse portfolio of successfully completed projects across various sectors, demonstrating our commitment to engineering excellence.
             </p>
           </motion.div>
@@ -109,8 +109,8 @@ export default function ProjectsPage() {
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-2 text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded-none border ${
                     activeCategory === category 
-                      ? "bg-brand-orange border-brand-orange text-white shadow-lg shadow-brand-orange/20" 
-                      : "bg-transparent border-brand-dark/10 text-brand-dark/60 hover:border-brand-orange hover:text-brand-orange"
+                      ? "bg-brand-red border-brand-red text-white shadow-lg shadow-brand-red/20" 
+                      : "bg-transparent border-brand-dark/10 text-brand-dark/60 hover:border-brand-red hover:text-brand-red"
                   }`}
                 >
                   {category}
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-80" />
                   
                   <div className="absolute top-6 left-6">
-                    <div className="bg-brand-orange text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest self-start">
+                    <div className="bg-brand-red text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest self-start">
                       {project.category}
                     </div>
                   </div>
@@ -154,10 +154,10 @@ export default function ProjectsPage() {
                       {project.title}
                     </h3>
                     <div className="flex items-center gap-2 text-white/60 text-xs font-bold uppercase tracking-widest mb-6">
-                      <MapPin className="w-3 h-3 text-brand-orange" />
+                      <MapPin className="w-3 h-3 text-brand-red" />
                       {project.location}
                     </div>
-                    <div className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-500">
+                    <div className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-brand-red group-hover:border-brand-red transition-all duration-500">
                       <ArrowRight className="w-5 h-5 text-white" />
                     </div>
                   </div>

@@ -8,15 +8,15 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-brand-dark">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[600px] flex items-center bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=2000"
             alt="Industrial Site"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-white/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -27,16 +27,16 @@ export default function ServicesPage() {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Our Expertise
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-bold text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
               Comprehensive <br />
-              <span className="text-brand-orange">Building</span> Solutions.
+              <span className="text-brand-red">Building</span> Solutions.
             </h1>
-            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
+            <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">
               From construction and design management to specialized consultancy, we provide end-to-end expertise for your infrastructure projects.
             </p>
           </motion.div>

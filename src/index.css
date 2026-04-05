@@ -6,9 +6,9 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   --font-logo: "Caveat", cursive;
   
-  --color-brand-orange: #F27D26;
+  --color-brand-red: #E31E24;
   --color-brand-steel: #2C3E50;
-  --color-brand-light: #E4E3E0;
+  --color-brand-light: #FFFFFF;
   --color-brand-dark: #141414;
 }
 
@@ -79,7 +79,7 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
+    --primary: oklch(0.55 0.22 25);
     --primary-foreground: oklch(0.985 0 0);
     --secondary: oklch(0.97 0 0);
     --secondary-foreground: oklch(0.205 0 0);

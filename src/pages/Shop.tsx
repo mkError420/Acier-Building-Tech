@@ -56,15 +56,15 @@ export default function Shop() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden min-h-[500px] flex items-center bg-brand-dark">
+      <section className="relative pt-48 pb-32 overflow-hidden min-h-[500px] flex items-center bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2000"
             alt="Shop Hero"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-brand-dark/80" />
+          <div className="absolute inset-0 bg-white/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -75,16 +75,16 @@ export default function Shop() {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-[2px] w-12 bg-brand-orange" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">
+              <div className="h-[2px] w-12 bg-brand-red" />
+              <span className="text-brand-red uppercase tracking-[0.3em] text-xs font-bold">
                 Equipment & Materials
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-black text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
               Construction <br />
-              <span className="text-brand-orange">Kits</span>.
+              <span className="text-brand-red">Kits</span>.
             </h1>
-            <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
+            <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">
               High-quality, pre-engineered construction kits for industrial, commercial, and logistics projects. Built for durability and rapid deployment.
             </p>
           </motion.div>
@@ -110,7 +110,7 @@ export default function Shop() {
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-4 left-4 bg-brand-orange text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
+                  <div className="absolute top-4 left-4 bg-brand-red text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
                     {product.category}
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export default function Shop() {
                       <h3 className="text-lg lg:text-xl font-black text-brand-dark uppercase tracking-tight leading-tight">
                         {product.title}
                       </h3>
-                      <span className="text-brand-orange font-black text-lg lg:text-xl">{product.price}</span>
+                      <span className="text-brand-red font-black text-lg lg:text-xl">{product.price}</span>
                     </div>
                     <p className="text-brand-dark/60 text-xs lg:text-sm mb-6 leading-relaxed">
                       {product.description}
@@ -129,7 +129,7 @@ export default function Shop() {
                     <ul className="space-y-2 mb-8">
                       {product.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-2 text-[9px] lg:text-[10px] uppercase tracking-widest font-bold text-brand-dark/40">
-                          <Check className="w-3 h-3 text-brand-orange" />
+                          <Check className="w-3 h-3 text-brand-red" />
                           {feature}
                         </li>
                       ))}
@@ -138,7 +138,7 @@ export default function Shop() {
                   
                   <Button 
                     onClick={() => handleBooking(product)}
-                    className="w-full bg-brand-dark hover:bg-brand-orange text-white rounded-none py-5 lg:py-6 uppercase tracking-widest text-[10px] lg:text-xs font-bold transition-colors group px-4"
+                    className="w-full bg-brand-dark hover:bg-brand-red text-white rounded-none py-5 lg:py-6 uppercase tracking-widest text-[10px] lg:text-xs font-bold transition-colors group px-4"
                   >
                     Book This Kit
                     <ShoppingBag className="ml-2 w-3 h-3 lg:w-4 lg:h-4 group-hover:scale-110 transition-transform" />
@@ -172,7 +172,7 @@ export default function Shop() {
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsBookingOpen(false)}
-                className="absolute top-2 right-2 md:top-4 md:right-4 z-20 w-8 h-8 md:w-10 md:h-10 bg-brand-dark text-white flex items-center justify-center hover:bg-brand-orange transition-colors"
+                className="absolute top-2 right-2 md:top-4 md:right-4 z-20 w-8 h-8 md:w-10 md:h-10 bg-brand-dark text-white flex items-center justify-center hover:bg-brand-red transition-colors"
               >
                 <X className="w-4 h-4 md:w-5 md:h-5" />
               </motion.button>
@@ -187,9 +187,9 @@ export default function Shop() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <h4 className="text-[10px] uppercase tracking-[0.3em] text-brand-orange font-bold mb-1 md:mb-2">Booking Item</h4>
+                <h4 className="text-[10px] uppercase tracking-[0.3em] text-brand-red font-bold mb-1 md:mb-2">Booking Item</h4>
                 <h3 className="text-lg md:text-xl font-black text-brand-dark uppercase tracking-tight mb-2 md:mb-4">{selectedProduct.title}</h3>
-                <div className="text-xl md:text-2xl font-black text-brand-orange mb-4 md:mb-6">{selectedProduct.price}</div>
+                <div className="text-xl md:text-2xl font-black text-brand-red mb-4 md:mb-6">{selectedProduct.price}</div>
                 <div className="hidden md:block space-y-4">
                   <div className="flex items-start gap-3">
                     <Info className="w-4 h-4 text-brand-dark/40 mt-1" />
@@ -203,49 +203,49 @@ export default function Shop() {
               {/* Modal Right: Form */}
               <div className="md:w-2/3 p-6 md:p-12">
                 <div className="flex items-center gap-3 mb-2 md:mb-4">
-                  <div className="h-[1px] md:h-[2px] w-6 md:w-8 bg-brand-orange" />
-                  <span className="text-brand-orange uppercase tracking-[0.3em] text-[9px] md:text-[10px] font-bold">
+                  <div className="h-[1px] md:h-[2px] w-6 md:w-8 bg-brand-red" />
+                  <span className="text-brand-red uppercase tracking-[0.3em] text-[9px] md:text-[10px] font-bold">
                     Reservation Form
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-black text-brand-dark uppercase tracking-tighter mb-6 md:mb-8">
-                  Confirm Your <span className="text-brand-orange">Booking</span>.
+                  Confirm Your <span className="text-brand-red">Booking</span>.
                 </h2>
 
                 <form className="space-y-4 md:space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div className="space-y-1 md:space-y-2">
                       <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Full Name</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="Your Name" />
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-red focus:ring-0 h-10 md:h-12" placeholder="Your Name" />
                     </div>
                     <div className="space-y-1 md:space-y-2">
                       <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Company Name</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="Your Company" />
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-red focus:ring-0 h-10 md:h-12" placeholder="Your Company" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div className="space-y-1 md:space-y-2">
                       <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Email Address</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="email@example.com" />
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-red focus:ring-0 h-10 md:h-12" placeholder="email@example.com" />
                     </div>
                     <div className="space-y-1 md:space-y-2">
                       <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Phone Number</label>
-                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 h-10 md:h-12" placeholder="+880..." />
+                      <Input className="rounded-none border-brand-dark/10 focus:border-brand-red focus:ring-0 h-10 md:h-12" placeholder="+880..." />
                     </div>
                   </div>
 
                   <div className="space-y-1 md:space-y-2">
                     <label className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold text-brand-dark/50">Customization Requirements</label>
-                    <Textarea className="rounded-none border-brand-dark/10 focus:border-brand-orange focus:ring-0 min-h-[80px] md:min-h-[100px]" placeholder="Any specific changes to the kit?" />
+                    <Textarea className="rounded-none border-brand-dark/10 focus:border-brand-red focus:ring-0 min-h-[80px] md:min-h-[100px]" placeholder="Any specific changes to the kit?" />
                   </div>
 
                   <Button 
                     onClick={() => {
-                      alert("Booking request submitted! Our team will contact you soon.");
+                      console.log("Booking request submitted!");
                       setIsBookingOpen(false);
                     }}
-                    className="w-full bg-brand-orange hover:bg-brand-dark text-white rounded-none py-6 md:py-8 text-xs md:text-sm uppercase tracking-widest font-black transition-all group"
+                    className="w-full bg-brand-red hover:bg-brand-dark text-white rounded-none py-6 md:py-8 text-xs md:text-sm uppercase tracking-widest font-black transition-all group"
                   >
                     Submit Booking Request
                     <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
