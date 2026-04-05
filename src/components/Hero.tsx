@@ -36,7 +36,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-7xl font-bold text-brand-dark leading-[0.9] tracking-tighter mb-8 uppercase"
+              className="text-4xl sm:text-6xl md:text-7xl font-bold text-brand-dark leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 uppercase"
             >
               <motion.span
                 initial={{ opacity: 0, x: -20 }}

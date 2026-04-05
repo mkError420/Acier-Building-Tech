@@ -80,8 +80,8 @@ export default function Shop() {
                 Equipment & Materials
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
-              Construction <br />
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-brand-dark leading-[1.1] md:leading-[0.9] tracking-tighter uppercase mb-8">
+              Construction <br className="hidden sm:block" />
               <span className="text-brand-red">Kits</span>.
             </h1>
             <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">

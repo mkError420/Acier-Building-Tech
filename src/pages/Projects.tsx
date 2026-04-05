@@ -81,8 +81,8 @@ export default function ProjectsPage() {
                 Our Portfolio
               </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold text-brand-dark leading-[0.9] tracking-tighter uppercase mb-8">
-              Structural <br />
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-brand-dark leading-[1.1] md:leading-[0.9] tracking-tighter uppercase mb-8">
+              Structural <br className="hidden sm:block" />
               <span className="text-brand-red">Milestones</span>.
             </h1>
             <p className="text-brand-dark text-lg md:text-xl leading-relaxed font-medium max-w-2xl">

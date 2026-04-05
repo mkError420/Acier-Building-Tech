@@ -64,9 +64,9 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-black text-brand-dark leading-[0.9] tracking-tighter uppercase"
+              className="text-4xl sm:text-5xl md:text-7xl font-black text-brand-dark leading-[1.1] md:leading-[0.9] tracking-tighter uppercase"
             >
-              Comprehensive <br />
+              Comprehensive <br className="hidden sm:block" />
               <span className="text-brand-red relative">
                 Building
                 <motion.div 
@@ -74,7 +74,7 @@ export default function Services() {
                   whileInView={{ width: '100%' }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="absolute -bottom-2 left-0 h-2 bg-brand-red/20 -z-10"
+                  className="absolute -bottom-1 md:-bottom-2 left-0 h-1 md:h-2 bg-brand-red/20 -z-10"
                 />
               </span> Solutions.
             </motion.h2>
