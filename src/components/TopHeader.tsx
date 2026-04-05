@@ -2,7 +2,7 @@ import { Phone, Mail } from "lucide-react";
 
 export default function TopHeader() {
   return (
-    <div className="bg-white border-b border-brand-dark/5 py-2 hidden md:block">
+    <div className="bg-brand-baby-blue border-b border-brand-dark/5 py-2 hidden md:block">
       <div className="container mx-auto px-6 flex justify-between items-center text-[10px] uppercase tracking-[0.2em] font-bold">
         <div className="flex items-center gap-6">
           <a href="tel:+1234567890" className="flex items-center gap-2 text-brand-dark/60 hover:text-brand-red transition-colors group">

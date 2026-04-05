@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled || !isHomePage ? "bg-white/95 backdrop-blur-md border-b border-brand-dark/10 top-0" : "bg-transparent top-0 md:top-10"
+        scrolled || !isHomePage ? "bg-brand-baby-blue/95 backdrop-blur-md border-b border-brand-dark/10 top-0" : "bg-transparent top-0 md:top-10"
       }`}
     >
       <div className={`container mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled || !isHomePage ? "py-3" : "py-6"}`}>
@@ -92,7 +92,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-white border-b border-brand-dark/10 lg:hidden"
+            className="absolute top-full left-0 right-0 bg-brand-baby-blue border-b border-brand-dark/10 lg:hidden"
           >
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (

@@ -21,7 +21,7 @@ export default function Clients() {
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="py-16 bg-white border-t border-brand-dark/5 overflow-hidden">
+    <section className="py-16 bg-brand-light-gray border-t border-brand-dark/5 overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <div className="flex items-center gap-3 mb-4">
           <div className="h-[2px] w-12 bg-brand-red" />
@@ -50,7 +50,7 @@ export default function Clients() {
           {duplicatedClients.map((client, index) => (
             <div
               key={`${client}-${index}`}
-              className="text-brand-dark/20 hover:text-brand-red transition-all duration-500 text-xl md:text-3xl font-black uppercase tracking-tighter px-8 cursor-default"
+              className="text-brand-dark/40 hover:text-brand-red transition-all duration-500 text-xl md:text-3xl font-black uppercase tracking-tighter px-8 cursor-default"
             >
               {client}
             </div>
@@ -58,8 +58,8 @@ export default function Clients() {
         </motion.div>
 
         {/* Gradient Overlays for smooth fade */}
-        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-brand-light-gray via-brand-light-gray/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-brand-light-gray via-brand-light-gray/80 to-transparent z-10 pointer-events-none" />
       </div>
     </section>
   );

@@ -10,6 +10,10 @@
   --color-brand-steel: #2C3E50;
   --color-brand-light: #FFFFFF;
   --color-brand-dark: #36454F;
+  --color-brand-baby-blue: #89CFF0;
+  --color-brand-dark-green: #013220;
+  --color-brand-dark-gray: #1A1A1A;
+  --color-brand-light-gray: #F5F5F5;
 }
 
 @layer base {

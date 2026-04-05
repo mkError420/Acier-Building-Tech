@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-baby-blue">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -14,7 +14,7 @@ export default function Hero() {
           className="w-full h-full object-cover opacity-10"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-baby-blue via-brand-baby-blue/80 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

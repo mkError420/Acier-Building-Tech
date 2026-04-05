@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white border-t border-brand-dark/5 pt-24 pb-12">
+    <footer className="bg-brand-dark-gray border-t border-white/5 pt-24 pb-12 text-white">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="col-span-1 lg:col-span-1">
@@ -18,11 +18,11 @@ export default function Footer() {
               </div>
           <div className="font-logo text-lg md:text-2xl flex items-center gap-1 md:gap-2 font-bold">
             <span className="text-red-500">acieR</span>
-            <span className="text-brand-dark">building</span>
+            <span className="text-white">building</span>
             <span className="text-red-500">technology</span>
           </div>
             </Link>
-            <p className="text-brand-dark/40 text-sm leading-relaxed font-light mb-8">
+            <p className="text-white/60 text-sm leading-relaxed font-light mb-8">
               Pioneering the future of industrial and commercial construction with innovative steel solutions and advanced engineering.
             </p>
             <div className="flex gap-4">
@@ -30,7 +30,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 border border-brand-dark/10 flex items-center justify-center rounded-sm text-brand-dark/40 hover:text-brand-red hover:border-brand-red transition-all duration-300"
+                  className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-sm text-white/40 hover:text-brand-red hover:border-brand-red transition-all duration-300"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-brand-dark font-bold uppercase tracking-widest text-xs mb-8">Quick Links</h4>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: "Home", href: "/" },
@@ -51,7 +51,7 @@ export default function Footer() {
                 { name: "Contact", href: "/contact" }
               ].map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-brand-dark/40 hover:text-brand-red transition-colors text-sm font-light uppercase tracking-widest">
+                  <Link to={link.href} className="text-white/40 hover:text-brand-red transition-colors text-sm font-light uppercase tracking-widest">
                     {link.name}
                   </Link>
                 </li>
@@ -60,11 +60,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold uppercase tracking-widest text-xs mb-8">Our Services</h4>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Our Services</h4>
             <ul className="space-y-4">
               {["Steel Structures", "Engineering", "Management", "Retrofitting", "Compliance"].map((service) => (
                 <li key={service}>
-                  <Link to="/services" className="text-brand-dark/40 hover:text-brand-red transition-colors text-sm font-light uppercase tracking-widest">
+                  <Link to="/services" className="text-white/40 hover:text-brand-red transition-colors text-sm font-light uppercase tracking-widest">
                     {service}
                   </Link>
                 </li>
@@ -73,15 +73,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold uppercase tracking-widest text-xs mb-8">Newsletter</h4>
-            <p className="text-brand-dark/40 text-sm leading-relaxed font-light mb-6">
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Newsletter</h4>
+            <p className="text-white/40 text-sm leading-relaxed font-light mb-6">
               Subscribe to our newsletter for the latest updates in building technology.
             </p>
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="bg-brand-dark/5 border border-brand-dark/10 rounded-none px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-red w-full"
+                className="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-red w-full placeholder:text-white/20"
               />
               <Button className="bg-brand-red hover:bg-brand-red/90 text-white rounded-none px-4">
                 Join
@@ -90,16 +90,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-brand-dark/5 gap-8">
-          <div className="text-brand-dark/20 text-[10px] uppercase tracking-widest font-bold">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
+          <div className="text-white/20 text-[10px] uppercase tracking-widest font-bold">
             © {new Date().getFullYear()} Acier Building Tech. All Rights Reserved.
           </div>
           
        
           
           <div className="flex gap-8">
-            <Link to="/privacy-policy" className="text-brand-dark/20 hover:text-brand-dark transition-colors text-[10px] uppercase tracking-widest font-bold">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="text-brand-dark/20 hover:text-brand-dark transition-colors text-[10px] uppercase tracking-widest font-bold">Terms of Service</Link>
+            <Link to="/privacy-policy" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-white/20 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold">Terms of Service</Link>
           </div>
         </div>
       </div>
